@@ -14,12 +14,12 @@ const questions = [
   },
   {
     type: "input",
-    message: "What is your password?",
+    message: "Please enter a consice description of the project?",
     name: "description",
   },
   {
     type: "input",
-    message: "Please enter nstallation instructions:",
+    message: "Please enter installation instructions:",
     name: "install",
   },
   {
@@ -45,14 +45,15 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please enter your GitHub username:",
-    name: "username",
-  },
-  {
-    type: "input",
     message: "Please enter your email:",
     name: "email",
   },
+  {
+    type: "input",
+    message: "Please enter your GitHub username:",
+    name: "username",
+  },
+ 
 ];
 
 // TODO: Create a function to write README file
@@ -65,7 +66,7 @@ function writeToFile(data) {
 function init() {
   inquirer
     .prompt(questions)
-    .then((info) => writeToFile('README.md', generate(info)))
+    .then((info) => writeToFile(generate(info)))
 }
 
 // Function call to initialize app
