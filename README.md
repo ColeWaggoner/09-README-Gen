@@ -24,7 +24,9 @@
   
   ## Usage
   Node and npm inquirer must be installed. Use the integrated terminal to open the file location and run "index.js" with node.
-  VIDEO LINK 
+
+  Walkthrough video:
+  https://drive.google.com/file/d/1N2_ysFOqPbB9dP-fxeXmntvkNPdFdpj3/view?usp=sharing
   
   
   ## Contributions
