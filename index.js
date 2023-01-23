@@ -32,7 +32,7 @@ const questions = [
     type: "input",
     message:
       "Please enter contributions (People, tutorials, third-party assets):",
-    name: "credit",
+    name: "contribute",
   },
   {
     type: "input",
@@ -42,7 +42,7 @@ const questions = [
   {
     type: "list",
     choices: ["MIT", "Apache", "BSD", "Unlicense"],
-    message: "Re-enter password to confirm:",
+    message: "Please choose license:",
     name: "license",
   },
   {
@@ -72,7 +72,7 @@ function writeToFile(data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then((info) => writeToFile(generate(info)));
+  inquirer.prompt(questions).then((answers) => writeToFile(generate(answers)));
 }
 
 // Function call to initialize app

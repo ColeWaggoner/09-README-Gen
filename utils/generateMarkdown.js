@@ -16,16 +16,16 @@ function renderBadge(info) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(input) {
   return `
-  # ${data.title}
+  # ${input.title}
 
 
   ## Description
-  ${data.description}
+  ${input.description}
 
-  ![License Badge](https://img.shields.io/badge/license-${data.license}-success?style=flat)
-  ${renderBadge(data)}
+  ![License Badge](https://img.shields.io/badge/license-${input.license}-success?style=flat)
+  ${renderBadge(input)}
   
   
   ## Table of Contents
@@ -38,30 +38,30 @@ function generateMarkdown(data) {
   
   
   ## Installation
-  ${data.install}
+  ${input.install}
   
   
   ## Usage
-  ${data.usage}
+  ${input.usage}
   
   
   ## Contributions
-  ${data.contribute}
+  ${input.contribute}
   
   
   ## Tests
-  ${data.tests}
+  ${input.tests}
   
 
   ## License
-  Copyright (c) [${data.username}](https://github.com/${data.username}). All rights reserved. 
-  Licensed under the [${data.license} license](https://choosealicense.com/licenses/${data.license.toLowerCase()}/).
+  Copyright (c) [${input.username}](https://github.com/${input.username}). All rights reserved. 
+  Licensed under the [${input.license} license](https://choosealicense.com/licenses/${input.license.toLowerCase()}/).
   
   
   ## Questions
   If you have any questions please contact me here:
-  \nEmail: ${data.email}
-  \nGitHub: [${data.username}](https://github.com/${data.username})`;
+  \nEmail: ${input.email}
+  \nGitHub: [${input.username}](https://github.com/${input.username})`;
 }
 
 module.exports = generateMarkdown;
